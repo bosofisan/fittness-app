@@ -1,21 +1,23 @@
 import React, {useEffect, useState} from "react";
-import { data } from "react-router-dom";
+// import { data } from "react-router-dom";
 
 function Planner() {
   const [schedule, setSchedule] = useState([]);
   const [workouts, setWorkouts] = useState([]);
-  const [currentTime, setCurrentTime] = useState(new Date());
+  // const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    fetch("http://localhost:3001/schedule")
-      .then((response) => response.json())
-      .then((data) => setSchedule(data))
-      .catch((error) => console.error("Error fetching schedule:", error));
-
-    fetch("http://localhost:3001/workouts")
-      .then((response) => response.json())
-      .then((data) => setWorkouts(data))
-      .catch((error) => console.error("Error fetching workouts:", error));
+    Promise.all([
+      fetch("http://localhost:3001/schedule"),
+      fetch("http://localhost:3001/workouts")
+    ])
+      .then(([response1],[response2]) => {
+        return Promise.all([response1.json(), response2.json()]);
+        .then (([scheduleData, workoutData]) =>{
+          setSchedule(scheduleData);
+          setWorkouts(workoutData);
+        })
+      .catch((error) => console.error("Error fetching data", error));
   }, []);
 
   useEffect(() => {
