@@ -4,39 +4,33 @@
       "id": 1,
       "name": "Push-Ups",
       "image": "./images/Pushup.jpg",
-      "description": "An upper body exercise to build arm and chest strength."
+      "description": "An upper body exercise to build arm and chest strength.",
+      "type": "Upper Body"
     },
     {
       "id": 2,
       "name": "Squats",
       "image": "./images/Squat.jpg",
-      "description": "A lower body exercise to build leg and buttocks strength."
+      "duration": "90 seconds",
+      "description": "A lower body exercise to build leg and buttocks strength.",
+      "type": "Lower Body"
     },
     {
       "id": 3,
       "name": "Plank",
       "image": "./images/Plank.jpg",
-      "description": "A core-strengthening exercise, targeting abs and lower back."
+      "duration": "1 minute",
+      "description": "A core-strengthening exercise, targeting abs and lower back.",
+      "type": "Core"
     },
     {
       "id": 4,
       "name": "Mountain Climbers",
       "image": "./images/MountainClimber.jpg",
-      "description": "A full-body exercise that primarily strengthens the core, while also improving lower body endurance and building arm and shoulder stability."
+      "duration": "1 minute",
+      "description": "A full-body exercise that primarily strengthens the core, while also improving lower body endurance and building arm and shoulder stability.",
+      "type": "Full Body"
     }
   ],
-  "schedule": [
-    {
-      "id": 1,
-      "workoutId": 1,
-      "date": "2025-01-18",
-      "time": "8:00 AM"
-    },
-    {
-      "id": 2,
-      "workoutId": 2,
-      "date": "2025-01-18",
-      "time": "9:00 AM"
-    }
-  ]
+  "plannedWorkouts": []
 }
