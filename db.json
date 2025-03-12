@@ -1,14 +1,14 @@
 {
   "workouts": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Push-Ups",
       "image": "./images/Pushup.jpg",
       "description": "An upper body exercise to build arm and chest strength.",
       "type": "Upper Body"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Squats",
       "image": "./images/Squat.jpg",
       "duration": "90 seconds",
@@ -16,7 +16,7 @@
       "type": "Lower Body"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Plank",
       "image": "./images/Plank.jpg",
       "duration": "1 minute",
@@ -24,7 +24,7 @@
       "type": "Core"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Mountain Climbers",
       "image": "./images/MountainClimber.jpg",
       "duration": "1 minute",
