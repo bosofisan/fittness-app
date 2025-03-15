@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import WorkoutCard from "./WorkoutCard";
+import NewWorkoutForm from "./NewWorkout";
 
-function Library({ workouts, plannedWorkouts, setPlannedWorkouts }) {
+function Library({ workouts, setWorkouts, plannedWorkouts, setPlannedWorkouts }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleAddToPlanner = (workout) => {
@@ -31,12 +32,8 @@ function Library({ workouts, plannedWorkouts, setPlannedWorkouts }) {
   return (
     <div className="library">
       <h2>Workout Library</h2>
-      <input
-        type="text"
-        placeholder="Search workouts..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <NewWorkoutForm setWorkouts={setWorkouts} />
+      <input type="text" placeholder="Search workouts..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
       <div className="workout-list">
         {filteredWorkouts.map((workout) => (
           <div key={workout.id}>

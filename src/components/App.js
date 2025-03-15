@@ -26,14 +26,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route 
-          path="/library" 
-          element={<Library workouts={workouts} plannedWorkouts={plannedWorkouts} setPlannedWorkouts={setPlannedWorkouts} />} 
-        />
-        <Route 
-          path="/planner" 
-          element={<Planner plannedWorkouts={plannedWorkouts} setPlannedWorkouts={setPlannedWorkouts} />} 
-        />
+        <Route path="/library" element={<Library workouts={workouts} setWorkouts={setWorkouts} plannedWorkouts={plannedWorkouts} setPlannedWorkouts={setPlannedWorkouts} />} />
+        <Route path="/planner" element={<Planner plannedWorkouts={plannedWorkouts} setPlannedWorkouts={setPlannedWorkouts} />} />
       </Routes>
     </>
   );
